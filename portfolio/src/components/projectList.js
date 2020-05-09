@@ -1,4 +1,6 @@
-export let projectList = [
+import React from "react";
+
+let projectList = [
   {
     name: "Tranquil",
     url: "https://rugged-gunnison-25361.herokuapp.com/",
@@ -30,3 +32,21 @@ export let projectList = [
     repo: "https://github.com/lucvankerkvoort/Clicky-Game",
   },
 ];
+
+function Elements() {
+  return projectList.map((element, i) => {
+    return (
+      <div className="background">
+        <div className="info">
+          <h2>{element.name}</h2>
+          <p>Technologies: {element.technologies}</p>
+          <a href={element.url}>Link</a>
+          <br />
+          <a href={element.repo}>Repository</a>
+        </div>
+      </div>
+    );
+  });
+}
+
+export default Elements;

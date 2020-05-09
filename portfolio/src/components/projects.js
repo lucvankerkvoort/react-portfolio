@@ -1,14 +1,10 @@
 import React from "react";
-import { projectList } from "./projectList";
+import Elements from "./projectList";
 
 function Projects() {
   return (
     <div className="projects">
-      {projectList.map(element, (i) => {
-        <div>
-          <h2>{element.name}</h2>
-        </div>;
-      })}
+      <Elements />
     </div>
   );
 }
